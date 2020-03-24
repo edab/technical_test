@@ -1,0 +1,94 @@
+\hypertarget{encdec_8c}{}\section{encdec.\+c File Reference}
+\label{encdec_8c}\index{encdec.\+c@{encdec.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$stddef.\+h$>$}\\*
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include $<$stdbool.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}encdec.\+h\char`\"{}}\\*
+Include dependency graph for encdec.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{encdec_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{encdec_8c_a8f8ffe1f5e961bcf9f4373d868c923d5}{B\+I\+T\+M\+A\+S\+K\+\_\+7\+B\+I\+TS}~0x7F
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \hyperlink{encdec_8c_a1ed55e9e612c6f9dde8c7cdc90d19769}{text\+\_\+7bit\+\_\+encode} (const char $\ast$txt\+\_\+in, char $\ast$txt\+\_\+out)
+\begin{DoxyCompactList}\small\item\em Encode an A\+S\+C\+II string into a 7 bit compressed representation. \end{DoxyCompactList}\item 
+int32\+\_\+t \hyperlink{encdec_8c_ad7af7323d34249a7dc0636b5eb0b2e7a}{text\+\_\+7bit\+\_\+decode} (const char $\ast$txt\+\_\+in, char $\ast$txt\+\_\+out)
+\begin{DoxyCompactList}\small\item\em Decode a 7 bit compressed representation into a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{encdec.\+c@{encdec.\+c}!B\+I\+T\+M\+A\+S\+K\+\_\+7\+B\+I\+TS@{B\+I\+T\+M\+A\+S\+K\+\_\+7\+B\+I\+TS}}
+\index{B\+I\+T\+M\+A\+S\+K\+\_\+7\+B\+I\+TS@{B\+I\+T\+M\+A\+S\+K\+\_\+7\+B\+I\+TS}!encdec.\+c@{encdec.\+c}}
+\subsubsection[{\texorpdfstring{B\+I\+T\+M\+A\+S\+K\+\_\+7\+B\+I\+TS}{BITMASK_7BITS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+I\+T\+M\+A\+S\+K\+\_\+7\+B\+I\+TS~0x7F}\hypertarget{encdec_8c_a8f8ffe1f5e961bcf9f4373d868c923d5}{}\label{encdec_8c_a8f8ffe1f5e961bcf9f4373d868c923d5}
+
+
+Definition at line 9 of file encdec.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{encdec.\+c@{encdec.\+c}!text\+\_\+7bit\+\_\+decode@{text\+\_\+7bit\+\_\+decode}}
+\index{text\+\_\+7bit\+\_\+decode@{text\+\_\+7bit\+\_\+decode}!encdec.\+c@{encdec.\+c}}
+\subsubsection[{\texorpdfstring{text\+\_\+7bit\+\_\+decode(const char $\ast$txt\+\_\+in, char $\ast$txt\+\_\+out)}{text_7bit_decode(const char *txt_in, char *txt_out)}}]{\setlength{\rightskip}{0pt plus 5cm}int32\+\_\+t text\+\_\+7bit\+\_\+decode (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{txt\+\_\+in, }
+\item[{char $\ast$}]{txt\+\_\+out}
+\end{DoxyParamCaption}
+)}\hypertarget{encdec_8c_ad7af7323d34249a7dc0636b5eb0b2e7a}{}\label{encdec_8c_ad7af7323d34249a7dc0636b5eb0b2e7a}
+
+
+Decode a 7 bit compressed representation into a string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em txt\+\_\+in} & Null-\/terminated 7-\/bit encoded string \\
+\hline
+\mbox{\tt out}  & {\em txt\+\_\+out} & Null-\/terminated decoded A\+S\+C\+II string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+size of the output data ($>$0) or error ($<$0) 
+\end{DoxyReturn}
+
+
+Definition at line 75 of file encdec.\+c.
+
+\index{encdec.\+c@{encdec.\+c}!text\+\_\+7bit\+\_\+encode@{text\+\_\+7bit\+\_\+encode}}
+\index{text\+\_\+7bit\+\_\+encode@{text\+\_\+7bit\+\_\+encode}!encdec.\+c@{encdec.\+c}}
+\subsubsection[{\texorpdfstring{text\+\_\+7bit\+\_\+encode(const char $\ast$txt\+\_\+in, char $\ast$txt\+\_\+out)}{text_7bit_encode(const char *txt_in, char *txt_out)}}]{\setlength{\rightskip}{0pt plus 5cm}int32\+\_\+t text\+\_\+7bit\+\_\+encode (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{txt\+\_\+in, }
+\item[{char $\ast$}]{txt\+\_\+out}
+\end{DoxyParamCaption}
+)}\hypertarget{encdec_8c_a1ed55e9e612c6f9dde8c7cdc90d19769}{}\label{encdec_8c_a1ed55e9e612c6f9dde8c7cdc90d19769}
+
+
+Encode an A\+S\+C\+II string into a 7 bit compressed representation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em txt\+\_\+in} & Null-\/terminated A\+S\+C\+II string to encode \\
+\hline
+\mbox{\tt out}  & {\em txt\+\_\+out} & 7-\/bit encoded string, null terminated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+size of the output data or error ($<$0) 
+\end{DoxyReturn}
+
+
+Definition at line 18 of file encdec.\+c.
+

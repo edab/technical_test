@@ -1,0 +1,60 @@
+The encode function accept 8-\/bit A\+S\+C\+II characters, and compress the string by removing the most significant bit and packing such 7-\/bit characters in the 8-\/bit bytes, so that all the bits are used (each 8 character sequence would then fit in 7 bytes)
+
+For example, consider the following string and it\textquotesingle{}s hexadecimal representation\+:
+
+
+\begin{DoxyCode}
+1 ASCII string: H    e    l    l    o   
+2   Hex values: 0x48 0x65 0x6C 0x6C 0x6F    
+\end{DoxyCode}
+
+
+We can represent all the chars in 8bit binary form, and also in 7bit form removing the most significant bit\+:
+
+
+\begin{DoxyCode}
+1 8bit form: 01001000 01100101 01101100 01101100 01101111
+2 7bit form: .1001000 .1100101 .1101100 .1101100 .1101111
+\end{DoxyCode}
+
+
+Now we move the L\+SB bit from the 2nd byte to the M\+SB bit of the 1st byte\+:
+
+
+\begin{DoxyCode}
+1                           *
+2 Move bit: .1001000 .110010. .1101100 .1101100 .1101111
+3 Move bit: 11001000 .110010. .1101100 .1101100 .1101111
+4           *
+\end{DoxyCode}
+
+
+We can shift the 2nd byte by one space, the one free\+:
+
+
+\begin{DoxyCode}
+1                  ------>
+2 Shift: 11001000 .110010. .1101100 .1101100 .1101111
+3 Shift: 11001000 ..110010 .1101100 .1101100 .1101111
+\end{DoxyCode}
+
+
+And we can repeat the first step, taking this time 2 L\+SB bits from the 3rd character\+:
+
+
+\begin{DoxyCode}
+1                                    **
+2 Move bits: 11001000 ..110010 .11011.. .1101100 .1101111
+3 Move bits: 11001000 00110010 .1101100 .1101100 .1101111
+4                     **
+\end{DoxyCode}
+
+
+And repeat this process for every character, obtaining\+:
+
+
+\begin{DoxyCode}
+1     Result: 11001000 00110010 10011011 11111101 00000110
+2 Hex values: 0xC8     0x32     0x9B     0xFD     0x06
+\end{DoxyCode}
+ 

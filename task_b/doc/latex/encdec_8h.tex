@@ -1,0 +1,125 @@
+\hypertarget{encdec_8h}{}\section{encdec.\+h File Reference}
+\label{encdec_8h}\index{encdec.\+h@{encdec.\+h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+Include dependency graph for encdec.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{encdec_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{encdec_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{encdec_8h_adba6e73bc444514871898203133c02cc}{L\+I\+B\+\_\+\+E\+R\+R\+\_\+\+N\+U\+L\+L\+\_\+\+P\+TR}~-\/1
+\item 
+\#define \hyperlink{encdec_8h_a3e39be0f446773fef1c51f2588d6108a}{L\+I\+B\+\_\+\+E\+R\+R\+\_\+\+N\+O\+N\+\_\+\+A\+S\+C\+II}~-\/2
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \hyperlink{encdec_8h_a1ed55e9e612c6f9dde8c7cdc90d19769}{text\+\_\+7bit\+\_\+encode} (const char $\ast$txt\+\_\+in, char $\ast$txt\+\_\+out)
+\begin{DoxyCompactList}\small\item\em Encode an A\+S\+C\+II string into a 7 bit compressed representation. \end{DoxyCompactList}\item 
+int32\+\_\+t \hyperlink{encdec_8h_ad7af7323d34249a7dc0636b5eb0b2e7a}{text\+\_\+7bit\+\_\+decode} (const char $\ast$txt\+\_\+in, char $\ast$txt\+\_\+out)
+\begin{DoxyCompactList}\small\item\em Decode a 7 bit compressed representation into a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{encdec.\+h@{encdec.\+h}!L\+I\+B\+\_\+\+E\+R\+R\+\_\+\+N\+O\+N\+\_\+\+A\+S\+C\+II@{L\+I\+B\+\_\+\+E\+R\+R\+\_\+\+N\+O\+N\+\_\+\+A\+S\+C\+II}}
+\index{L\+I\+B\+\_\+\+E\+R\+R\+\_\+\+N\+O\+N\+\_\+\+A\+S\+C\+II@{L\+I\+B\+\_\+\+E\+R\+R\+\_\+\+N\+O\+N\+\_\+\+A\+S\+C\+II}!encdec.\+h@{encdec.\+h}}
+\subsubsection[{\texorpdfstring{L\+I\+B\+\_\+\+E\+R\+R\+\_\+\+N\+O\+N\+\_\+\+A\+S\+C\+II}{LIB_ERR_NON_ASCII}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+I\+B\+\_\+\+E\+R\+R\+\_\+\+N\+O\+N\+\_\+\+A\+S\+C\+II~-\/2}\hypertarget{encdec_8h_a3e39be0f446773fef1c51f2588d6108a}{}\label{encdec_8h_a3e39be0f446773fef1c51f2588d6108a}
+
+
+Definition at line 4 of file encdec.\+h.
+
+\index{encdec.\+h@{encdec.\+h}!L\+I\+B\+\_\+\+E\+R\+R\+\_\+\+N\+U\+L\+L\+\_\+\+P\+TR@{L\+I\+B\+\_\+\+E\+R\+R\+\_\+\+N\+U\+L\+L\+\_\+\+P\+TR}}
+\index{L\+I\+B\+\_\+\+E\+R\+R\+\_\+\+N\+U\+L\+L\+\_\+\+P\+TR@{L\+I\+B\+\_\+\+E\+R\+R\+\_\+\+N\+U\+L\+L\+\_\+\+P\+TR}!encdec.\+h@{encdec.\+h}}
+\subsubsection[{\texorpdfstring{L\+I\+B\+\_\+\+E\+R\+R\+\_\+\+N\+U\+L\+L\+\_\+\+P\+TR}{LIB_ERR_NULL_PTR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+I\+B\+\_\+\+E\+R\+R\+\_\+\+N\+U\+L\+L\+\_\+\+P\+TR~-\/1}\hypertarget{encdec_8h_adba6e73bc444514871898203133c02cc}{}\label{encdec_8h_adba6e73bc444514871898203133c02cc}
+
+
+Definition at line 3 of file encdec.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{encdec.\+h@{encdec.\+h}!text\+\_\+7bit\+\_\+decode@{text\+\_\+7bit\+\_\+decode}}
+\index{text\+\_\+7bit\+\_\+decode@{text\+\_\+7bit\+\_\+decode}!encdec.\+h@{encdec.\+h}}
+\subsubsection[{\texorpdfstring{text\+\_\+7bit\+\_\+decode(const char $\ast$txt\+\_\+in, char $\ast$txt\+\_\+out)}{text_7bit_decode(const char *txt_in, char *txt_out)}}]{\setlength{\rightskip}{0pt plus 5cm}int32\+\_\+t text\+\_\+7bit\+\_\+decode (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{txt\+\_\+in, }
+\item[{char $\ast$}]{txt\+\_\+out}
+\end{DoxyParamCaption}
+)}\hypertarget{encdec_8h_ad7af7323d34249a7dc0636b5eb0b2e7a}{}\label{encdec_8h_ad7af7323d34249a7dc0636b5eb0b2e7a}
+
+
+Decode a 7 bit compressed representation into a string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em txt\+\_\+in} & Null-\/terminated 7-\/bit encoded string \\
+\hline
+\mbox{\tt out}  & {\em txt\+\_\+out} & Null-\/terminated decoded A\+S\+C\+II string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+size of the output data ($>$0) or error\+\_\+code ($<$0)
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em txt\+\_\+in} & Null-\/terminated 7-\/bit encoded string \\
+\hline
+\mbox{\tt out}  & {\em txt\+\_\+out} & Null-\/terminated decoded A\+S\+C\+II string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+size of the output data ($>$0) or error ($<$0) 
+\end{DoxyReturn}
+
+
+Definition at line 75 of file encdec.\+c.
+
+\index{encdec.\+h@{encdec.\+h}!text\+\_\+7bit\+\_\+encode@{text\+\_\+7bit\+\_\+encode}}
+\index{text\+\_\+7bit\+\_\+encode@{text\+\_\+7bit\+\_\+encode}!encdec.\+h@{encdec.\+h}}
+\subsubsection[{\texorpdfstring{text\+\_\+7bit\+\_\+encode(const char $\ast$txt\+\_\+in, char $\ast$txt\+\_\+out)}{text_7bit_encode(const char *txt_in, char *txt_out)}}]{\setlength{\rightskip}{0pt plus 5cm}int32\+\_\+t text\+\_\+7bit\+\_\+encode (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{txt\+\_\+in, }
+\item[{char $\ast$}]{txt\+\_\+out}
+\end{DoxyParamCaption}
+)}\hypertarget{encdec_8h_a1ed55e9e612c6f9dde8c7cdc90d19769}{}\label{encdec_8h_a1ed55e9e612c6f9dde8c7cdc90d19769}
+
+
+Encode an A\+S\+C\+II string into a 7 bit compressed representation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em txt\+\_\+in} & Null-\/terminated A\+S\+C\+II string to encode \\
+\hline
+\mbox{\tt out}  & {\em txt\+\_\+out} & 7-\/bit encoded string, null terminated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+size of the output data or error\+\_\+code ($<$0)
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em txt\+\_\+in} & Null-\/terminated A\+S\+C\+II string to encode \\
+\hline
+\mbox{\tt out}  & {\em txt\+\_\+out} & 7-\/bit encoded string, null terminated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+size of the output data or error ($<$0) 
+\end{DoxyReturn}
+
+
+Definition at line 18 of file encdec.\+c.
+
