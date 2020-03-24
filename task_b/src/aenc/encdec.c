@@ -113,13 +113,21 @@ int32_t text_7bit_decode(const char* txt_in, char* txt_out) {
 
 		txt_out[txt_out_idx++] = BITMASK_7BITS & (((unsigned char)txt_in[i] << shift_bits) | ((unsigned char)txt_in[i - 1] >> (8 - shift_bits)));
 
+		if (txt_out_idx == out_len) break;
+
 		shift_bits++;
 
 		if (shift_bits == 8) {
 			shift_bits = 1;
 			txt_out[txt_out_idx++] = txt_in[i] & BITMASK_7BITS;
+			if (txt_out_idx == out_len) break;
 		}
 
+	}
+
+	if (txt_out_idx < out_len) {
+		if ((unsigned char)txt_in[i - 1] >> (8 - shift_bits) != 0)
+			txt_out[txt_out_idx++] =	(unsigned char)txt_in[i - 1] >> (8 - shift_bits);
 	}
 
 	txt_out[txt_out_idx] = '\0';

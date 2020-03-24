@@ -14,7 +14,7 @@
 #include "aenc/encdec.h"
 
 #define SLEN 128
-#define TLEN 4
+#define TLEN 5
 
 /**
  * @brief Print an ASCII string in HEX and Bitfield format
@@ -57,10 +57,12 @@ int main(void)
 	char test_8b[TLEN][SLEN] = { "Hello World!", \
 																"Geigen", \
 																"Mappets", \
+																"Exciting", \
 																"Somewhere"};
 	char test_7b[TLEN][SLEN] = { "\xC8\x32\x9B\xFD\x06\x5D\xDF\x72\x36\x39\x04", \
 																"\xC7\x72\xFA\x5C\x76\x03", \
 																"\xCD\x30\x1C\x5E\xA6\xCF\x01", \
+																"\x45\xFC\x38\x4D\x4F\xBB\xCF", \
 																"\xD3\x77\xBB\x7C\x47\x97\xE5\x65" };
 
 	// Encoding tests
@@ -120,10 +122,10 @@ int main(void)
 		printf("  ->  txt_in: ");
 		print_string(test_7b[i]);
 		ret = text_7bit_decode(test_7b[i], txt_out);
-		assert(ret == strlen(test_8b[i]));
-		assert(strcmp(txt_out, test_8b[i]) == 0);
 		printf("  -> txt_out: ");
 		print_string(txt_out);
+		assert(ret == strlen(test_8b[i]));
+		assert(strcmp(txt_out, test_8b[i]) == 0);
 	}
 
 	return EXIT_SUCCESS;
