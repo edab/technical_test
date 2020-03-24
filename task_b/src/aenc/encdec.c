@@ -42,6 +42,8 @@ int32_t text_7bit_encode(const char* txt_in, char* txt_out) {
 	}
 
 	// Pack the data, or return an error if a non-ASCII character is detected
+	// Since the behavior of the C shift operator is unknown for signed number,
+	// the characters are typecasted before using them.
 	size_t txt_out_idx = 0;
 	uint8_t shift_bits = 0;
 	size_t i = 0;
@@ -99,6 +101,8 @@ int32_t text_7bit_decode(const char* txt_in, char* txt_out) {
 	}
 
 	// UnPack the data
+	// Since the behavior of the C shift operator is unknown for signed number,
+	// the characters are typecasted before using them.
 	size_t txt_out_idx = 0;
 	uint8_t shift_bits = 1;
 	size_t i = 1;
